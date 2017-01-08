@@ -34,7 +34,7 @@ Notebooks are very popular in the Data Science and Machine Learning communities 
 
 The easiest way to install Python and Jupyter on your own machine is with [Anaconda](https://www.continuum.io/downloads) (I recommend to use Python 2.7). Once you’ve installed Anaconda, you’ll need to install the BigML API wrappers, which you can do from the Anaconda prompt via:
 
-```bash pip install bigml
+``` pip install bigml
 ```
 
 Then, launch the Jupyter server from Anaconda Navigator or from the command line (e.g. `jupyter-notebook` on Mac). This should open a new window in your web browser, with a page served by Jupyter that lists the contents of the folder from which the server was launched. Make sure that the notebooks are within that folder or a sub-folder so you can navigate to them.
