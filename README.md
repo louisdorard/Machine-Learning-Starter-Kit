@@ -9,7 +9,7 @@ There is also an accompanying email course with additional, exclusive and free c
 
 ## Contents of the Kit
 
-* `Bootstrapping Machine Learning 1.0.5 sample.pdf` (Introduction to Machine Learning taken from my book)
+* `Bootstrapping Machine Learning 1.0.5 sample.pdf` (Introduction to Machine Learning taken from my [book](http://louisdorard.com/machine-learning-book))
 * `When Machine Learning fails.pdf`
 * `How to improve your business by predicting churn.pdf` (Practical & code-free tutorial)
 * `Machine Learning with BigML API - Interactive Code Tutorial.ipynb` (Jupyter notebook in Python on the basics of BigML — see set up instructions below or use the version hosted on Wakari)
@@ -23,8 +23,8 @@ There is also an accompanying email course with additional, exclusive and free c
 
 Below is a list of real-world datasets that you can use to experiment with ML. I’m not including the actual datasets in this kit in order to make it smaller in size. You can download the datasets you’re interested in via http (links provided) or you can point to them from BigML or Amazon ML using the S3 paths given between brackets.
 
-* Real-estate properties in Las Vegas (`s3://papiseval/realtor-las-vegas.csv`)
-* Priority Inbox
+* [Real-estate properties in Las Vegas](https://papiseval.s3.amazonaws.com/realtor-las-vegas.csv) (`s3://papiseval/realtor-las-vegas.csv`)
+* [Priority Inbox](https://papiseval.s3.amazonaws.com/emails.csv) (`s3://papiseval/emails.csv`)
 * [Orange Churn](https://bml-data.s3.amazonaws.com/churn-orange.tsv.zip) (`s3://bml-data/churn-orange.tsv.zip`)
 
 
