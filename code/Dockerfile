@@ -1,0 +1,19 @@
+FROM jupyter/base-notebook
+# see https://github.com/jupyter/docker-stacks/blob/master/base-notebook/Dockerfile
+
+USER root
+
+RUN REPO=http://cdn-fastly.deb.debian.org \
+ && echo "deb $REPO/debian jessie main\ndeb $REPO/debian-security jessie/updates main" > /etc/apt/sources.list \
+ && apt-get update && apt-get -yq dist-upgrade \
+ && apt-get install -yq \
+    gcc \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
+USER $NB_USER
+
+ADD environment.yml /home/$NB_USER/
+RUN conda env create --name oml --file /home/$NB_USER/environment.yml
+RUN python -m ipykernel install --user --name oml --display-name "Python (oml)"
+RUN python -m bash_kernel.install
