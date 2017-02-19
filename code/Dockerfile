@@ -4,7 +4,8 @@ FROM jupyter/base-notebook
 USER root
 
 RUN REPO=http://cdn-fastly.deb.debian.org \
- && echo "deb $REPO/debian jessie main\ndeb $REPO/debian-security jessie/updates main" > /etc/apt/sources.list \
+ && echo "deb $REPO/debian jessie main" > /etc/apt/sources.list \
+ && echo "deb $REPO/debian-security jessie/updates main" >> /etc/apt/sources.list \
  && apt-get update && apt-get -yq dist-upgrade \
  && apt-get install -yq \
     gcc \
@@ -13,7 +14,7 @@ RUN REPO=http://cdn-fastly.deb.debian.org \
 
 USER $NB_USER
 
-ADD environment.yml /home/$NB_USER/
-RUN conda env create --name oml --file /home/$NB_USER/environment.yml
+ADD oml.yml /home/$NB_USER/
+RUN conda env create --name oml --file /home/$NB_USER/oml.yml
 RUN python -m ipykernel install --user --name oml --display-name "Python (oml)"
 RUN python -m bash_kernel.install
