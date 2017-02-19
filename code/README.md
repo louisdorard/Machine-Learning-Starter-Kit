@@ -58,6 +58,7 @@ For more info on the docker image we're using (louisdorard/oml), check out the D
 
 2.2 Make this environment available to Jupyter:
 
+> source activate oml
 > python -m ipykernel install --user --name oml --display-name "Python (oml)"
 
 Launching Jupyter is as simple as:
