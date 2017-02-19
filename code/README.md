@@ -83,7 +83,9 @@ Launching Jupyter should open a new window in your web browser ([http://localhos
 
 The home page served by Jupyter lists the contents of the folder from which the server was launched. Make sure that the notebooks are within that folder or a sub-folder so you can navigate to them.
 
-You may need to enter a "token" in order to access this home page. The token will be given to you when launching the server from the command line, or if you're using docker, you can get it with the following command:
+When opening a notebook, make sure that the kernel displayed on the right hand side of the page is "Python (oml)". If Jupyter notifies you that the kernel was not found, choose "Python [conda env:oml]".
+
+Note for docker users: you may need to enter a "token" in order to access this home page. You can get it with the following command:
 
 > docker exec --user jovyan oml jupyter notebook list
 

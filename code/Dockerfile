@@ -11,6 +11,8 @@ RUN REPO=http://cdn-fastly.deb.debian.org \
     gcc \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
+RUN pip install bash_kernel
+RUN python -m bash_kernel.install
 
 
 USER $NB_USER
@@ -21,6 +23,4 @@ RUN conda env create --name oml --file /home/$NB_USER/oml.yml
 
 USER root
 
-RUN pip install bash_kernel
-RUN python -m bash_kernel.install
 RUN /bin/bash -c "source activate oml; python -m ipykernel install --name oml --display-name 'Python (oml)'"
