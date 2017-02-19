@@ -12,12 +12,12 @@ There is also an accompanying email course with additional, exclusive and free c
 * `Bootstrapping Machine Learning 1.0.5 sample.pdf` (Introduction to Machine Learning taken from my [book](http://louisdorard.com/machine-learning-book))
 * `When Machine Learning fails.pdf`
 * `How to improve your business by predicting churn.pdf` (Practical & code-free tutorial)
-* `Machine Learning with BigML API - Interactive Code Tutorial.ipynb` (Jupyter notebook in Python on the basics of BigML — see set up instructions below or use the version hosted on Wakari)
-* `Machine Learning with BigML API - Interactive Code Tutorial.html` (Link to the notebook above hosted on Wakari)
-* `AmazonML-Python.ipynb`
 * `Machine Learning Canvas v0.4.pdf` (blank template to formalize your own ML use case)
 * `From Data to AI with the ML Canvas.pdf`: a preliminary guide to using the Canvas
-
+* code/
+  * `Machine Learning with BigML API - Interactive Code Tutorial.html` (Link to the notebook above hosted on Wakari)
+  * `Machine Learning with BigML API - Interactive Code Tutorial.ipynb` (Jupyter notebook in Python on the basics of BigML — see set up instructions below or use the version hosted on Wakari)
+  * `AmazonML-Python.ipynb`
 
 ## Datasets
 
@@ -28,32 +28,22 @@ Below is a list of real-world datasets that you can use to experiment with ML. I
 * [Orange Churn](https://bml-data.s3.amazonaws.com/churn-orange.tsv.zip) (`s3://bml-data/churn-orange.tsv.zip`)
 
 
-## Running the notebooks
-
-Notebooks are very popular in the Data Science and Machine Learning communities as they provide great ways to learn and experiment. They are interactive web pages that include blocks of code that you can run and edit. For this to work, they need to be served by a notebook server called Jupyter. You can either use your own installation of Jupyter or you can use a 3rd party service such as Wakari (see `Machine Learning with BigML API - Interactive Code Tutorial.html`).
-
-The easiest way to install Python and Jupyter on your own machine is with [Anaconda](https://www.continuum.io/downloads) (I recommend to use Python 2.7). Once you’ve installed Anaconda, you’ll need to install the BigML API wrappers, which you can do from the Anaconda prompt via:
-
-```
- pip install bigml
-```
-
-Then, launch the Jupyter server from Anaconda Navigator or from the command line (e.g. `jupyter-notebook` on Mac). This should open a new window in your web browser, with a page served by Jupyter that lists the contents of the folder from which the server was launched. Make sure that the notebooks are within that folder or a sub-folder so you can navigate to them.
-
-The first thing to do upon loading a notebook will be to fill in your API credentials.
-
-
 ## Creating accounts on cloud ML platforms
 
 * Create an account on [BigML](http://www.bigml.com). Usage of the service is free in “dev” mode.
 * Create an Amazon Web Services account in order to use [Amazon ML](https://aws.amazon.com/machine-learning/) (AML). Unfortunately there is no free trial, so if you want to use AML you will need to give your credit card details. That being said, usage is very cheap for basic experiments (see pricing: $0.42 per hour plus a few cents for predictions). If you want to use AML, you will need to go through identity verification and to make sure you can list “entities” on the AML dashboard.
 
-I recommend you to write down your access credentials somewhere safe (I use [LastPass](http://lastpass.com)).
+Both services can be used with graphical, web-based interfaces. I recommend you to write down your access credentials somewhere safe (I use [LastPass](http://lastpass.com)) and to use an up-to-date version of the [Chrome browser](http://www.google.com/chrome/).
 
 
 ### Other services
 
 There are many other services you could be using and which could be better fits for your own needs. I recommend you to have a look at the PAPIs conferences ([past events](http://www.papis.io/past-events) and [videos](http://youtube.com/channel/UCHMa1aYqXIQPnQD34W-ejQg/)) to learn more.
+
+
+## Running the notebooks
+
+See `code/README.md`
 
 
 ## Continue your journey in Machine Learning

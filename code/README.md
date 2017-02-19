@@ -88,10 +88,10 @@ You may need to enter a "token" in order to access this home page. The token wil
 
 ## Work In Progress
 
+If you notice anything that needs fixing, please [open an issue](https://github.com/louisdorard/Machine-Learning-Starter-Kit/issues).
+
 TODO test Option 3
 
 TODO test Option 2 on Windows
 
 TODO test Amazon ML notebook
-
-If you notice anything that needs fixing, please open an issue on this Github repo.
