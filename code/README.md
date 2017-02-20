@@ -43,7 +43,7 @@ Learn more about docker and how to install it on your OS at [https://www.docker.
 
 From the current directory:
 
-```
+```bash
 docker run -d -p 8888:8888 -v $PWD:/home/jovyan/work --name oml louisdorard/oml
 ```
 
@@ -53,7 +53,7 @@ That's it! Everything's already set up in the docker container. You can jump str
 
 2.1 On Linux:
 
-```
+```bash
 wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O /tmp/miniconda.sh
 /bin/bash /tmp/miniconda.sh -b -p ~/anaconda/
 export PATH="~/anaconda/bin:$PATH"
@@ -64,19 +64,19 @@ On macOS and Windows, follow these [instructions](https://conda.io/docs/install/
 
 Make sure that `conda` is installed:
 
-```
+```bash
 conda --version
 ```
 
 2.2 Install Jupyter:
 
-```
+```bash
 conda install jupyter
 ```
 
 2.2 Create an environment which contains all the libraries used in the notebooks. The environment configuration file is `oml.yml`. Execute this command from the directory where this file is (i.e. the same where this README file is):
 
-```
+```bash
 conda env create --name oml --file oml.yml
 ```
 
@@ -90,14 +90,14 @@ conda env create --name oml --file oml.yml
 
 2.2 Make this environment available to Jupyter:
 
-```
+```bash
 source activate oml
 python -m ipykernel install --user --name oml --display-name "Python (oml)"
 ```
 
 Launching Jupyter is as simple as:
 
-```
+```bash
 jupyter notebook
 ```
 
@@ -123,7 +123,7 @@ When opening a notebook, make sure that the kernel displayed on the right hand s
 
 Note for docker users: you may need to enter a "token" in order to access this home page. You can get it with the following command:
 
-```
+```bash
 docker exec --user jovyan oml jupyter notebook list
 ```
 
@@ -134,7 +134,7 @@ docker exec --user jovyan oml jupyter notebook list
 
 From a [jupyter/base-notebook](https://github.com/jupyter/docker-stacks/blob/master/base-notebook/) docker container, as root:
 
-```
+```bash
 apt-get update
 apt-get install -yq gcc # required for bigmler later on
 ```
@@ -155,7 +155,7 @@ conda env export -n oml
 
 From this directory:
 
-```
+```bash
 docker build -t="louisdorard/oml" .
 ```
 
