@@ -45,6 +45,7 @@ From the current directory:
 
 ```
 docker run -d -p 8888:8888 -v $PWD:/home/jovyan/work --name oml louisdorard/oml
+```
 
 That's it! Everything's already set up in the docker container. You can jump straight to the section of this document on "Accessing notebooks from Jupyter".
 
