@@ -2,12 +2,25 @@ This directory contains Jupyter notebooks (the .ipynb files), which themselves c
 
 **Contents:**
 
+* [0. Requirements](#requirements)
 * [I. Introduction to notebooks](#intro-notebooks)
 * [II. Setting up the conda environment](#setup-conda-environment)
 * [III. Accessing notebooks from Jupyter](#access-notebooks-jupyter)
 * [Appendix A: How the conda environment and docker image were created](#how)
 * [Appendix B: Further reading](#further-reading)
 * [Appendix C: Work In Progress](#wip)
+
+<a name="requirements"></a>
+## 0. Requirements
+
+You will need some basic command line knowledge to execute the commands given in this document. The Python code we'll be using in the notebooks is pretty simple, but if you want to learn more about Python, check out the resources below.
+
+Free resources to learn more:
+
+* [Codeacademy — Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
+* [Codeacademy — Learn Python](https://www.codecademy.com/learn/python)
+* [Robert Johansson — Scientific Python Lectures](https://github.com/jrjohansson/scientific-python-lectures) (and in particular "Introduction to Python programming")
+
 
 <a name="intro-notebooks"></a>
 ## I. Introduction to notebooks
