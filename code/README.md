@@ -20,6 +20,8 @@ Conda environments allow us to make sure we are all working with the same versio
 
 ### Option 1: docker
 
+Docker containers act as lightweight virtual machines. Similarly to VMs, they are built from images. The docker image we’ll use is referenced by "louisdorard/oml" (check out the Dockerfile of this repository for more information on how it was built).
+
 Docker is pretty easy to use, but if you're completely new to it, this may not be the best choice for you — unless you run into issues with options 2 & 3.
 
 #### Install docker
@@ -33,8 +35,6 @@ From the current directory:
 > docker run -d -p 8888:8888 -v $PWD:/home/jovyan/work --name oml louisdorard/oml
 
 That's it! Everything's already set up in the docker container. You can jump straight to the section of this document on "Accessing notebooks from Jupyter".
-
-For more info on the docker image we're using (louisdorard/oml), check out the Dockerfile in this repo.
 
 ### Option 2: local install via Miniconda and the command line
 
@@ -89,11 +89,14 @@ Note for docker users: you may need to enter a "token" in order to access this h
 
 > docker exec --user jovyan oml jupyter notebook list
 
+## A few links worth checking out
+
+- [What is the difference between pip and conda?](http://stackoverflow.com/questions/20994716/what-is-the-difference-between-pip-and-conda)
+- [Conda: Myths and Misconceptions](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
+
 ## Work In Progress
 
 If you notice anything that needs fixing, please [open an issue](https://github.com/louisdorard/Machine-Learning-Starter-Kit/issues).
-
-TODO test Option 3
 
 TODO test Option 2 on Windows
 
