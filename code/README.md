@@ -161,6 +161,8 @@ source activate oml
 conda install -c aterrel xgboost=0.4.0.c4fa2f --yes
 pip install bigmler==3.8.7 skll==1.2.1 bash_kernel pymongo
 pip install -i https://pypi.anaconda.org/pypi/simple hyperopt==0.0.2
+conda install --yes tensorflow=0.11.0
+conda install --yes -c conda-forge keras=1.2.2
 conda env export -n oml
 ```
 
