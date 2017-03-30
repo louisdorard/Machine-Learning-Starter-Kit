@@ -21,6 +21,8 @@ Free resources to learn more:
 * [Codeacademy — Learn Python](https://www.codecademy.com/learn/python)
 * [Robert Johansson — Scientific Python Lectures](https://github.com/jrjohansson/scientific-python-lectures) (and in particular "Introduction to Python programming")
 
+TODO add RAM requirements and OS (see Docker)
+
 
 <a name="intro-notebooks"></a>
 ## I. Introduction to notebooks
@@ -179,12 +181,15 @@ Automated builds were also set up on [docker hub](hub.docker.com/r/louisdorard/o
 
 - [What is the difference between pip and conda?](http://stackoverflow.com/questions/20994716/what-is-the-difference-between-pip-and-conda)
 - [Conda: Myths and Misconceptions](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
+- TODO: docker quickstart
 
 <a name="wip"></a>
 ## Appendix C: Work In Progress
 
 If you notice anything that needs fixing, please [open an issue](https://github.com/louisdorard/Machine-Learning-Starter-Kit/issues).
 
-TODO test Option 2 on Windows
-
 TODO test Amazon ML notebook
+
+TODO add Jupyter & Docker videos
+
+TODO test Option 2 on Windows
