@@ -39,6 +39,8 @@ The easiest way to install Python and Jupyter is via [conda](http://conda.io) (I
 
 Check out this discussion on [Miniconda vs Anaconda](https://conda.io/docs/download.html#should-i-download-anaconda-or-miniconda).
 
+For a quick introduction to Jupyter notebooks, check out this video: [https://youtu.be/pwr-pR0tu5Y](https://youtu.be/pwr-pR0tu5Y)
+
 <a name="setup-conda-environment"></a>
 ## II. Setting up the conda environment
 
@@ -49,6 +51,8 @@ Conda environments allow us to make sure we are all working with the same versio
 Docker containers act as lightweight virtual machines. Similarly to VMs, they are built from images. The docker image we’ll use is referenced by "louisdorard/oml" (check out the Dockerfile of this repository for more information on how it was built).
 
 Docker is pretty easy to use, but if you're completely new to it, this may not be the best choice for you — unless you run into issues with options 2 & 3.
+
+For a quick introduction to Docker, check out this video: [https://youtu.be/9hzFzcIX10g](https://youtu.be/9hzFzcIX10g)
 
 #### Install docker
 
