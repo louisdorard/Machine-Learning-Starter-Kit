@@ -60,13 +60,20 @@ Learn more about docker and how to install it on your OS at [https://www.docker.
 
 #### Run docker container
 
-From the current directory:
+Launch the following command from the current directory:
 
 ```bash
-docker run -d -p 8888:8888 -v $PWD:/home/jovyan/work --name oml louisdorard/oml
+docker run -d -p 8888:8888 -v $PWD:/home/jovyan/work --name oml louisdorard/oml start-notebook.sh --NotebookApp.token=''
 ```
 
 That's it! Everything's already set up in the docker container. You can jump straight to the section of this document on "Accessing notebooks from Jupyter".
+
+If you're curious, here's some more info on the command line above:
+
+* it creates a docker container called 'oml' -- which you can think of as a lightweight virtual machine -- from an image found on docker hub and referenced by 'louisdorard/oml'
+* it maps the current directory in your OS to /home/jovyan/work in the container
+* it maps the 8888 port so that when accessing it in your OS, everything gets redirected to the container on the same port
+* when the container is created the command `start-notebook.sh --NotebookApp.token=''` is executed inside of it, which starts the Jupyter notebook (the "token" option is to make it easier to connect to that notebook and is not recommended in production settings).
 
 ### Option 2: local install via Miniconda and the command line
 
