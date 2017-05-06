@@ -9,6 +9,7 @@ RUN REPO=http://cdn-fastly.deb.debian.org \
  && apt-get update && apt-get -yq dist-upgrade \
  && apt-get install -yq \
     gcc \
+    jq \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 RUN pip install bash_kernel
