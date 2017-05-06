@@ -2,7 +2,6 @@ This directory contains Jupyter notebooks (the .ipynb files), which themselves c
 
 **Contents:**
 
-* [0. Requirements](#requirements)
 * [I. Introduction to notebooks](#intro-notebooks)
 * [II. Setting up the conda environment](#setup-conda-environment)
 * [III. Accessing notebooks from Jupyter](#access-notebooks-jupyter)
@@ -10,26 +9,11 @@ This directory contains Jupyter notebooks (the .ipynb files), which themselves c
 * [Appendix B: Further reading](#further-reading)
 * [Appendix C: Work In Progress](#wip)
 
-<a name="requirements"></a>
-## 0. Requirements
-
-You will need some basic command line knowledge to execute the commands given in this document. The Python code we'll be using in the notebooks is pretty simple, but if you want to learn more about Python, check out the resources below.
-
-Free resources to learn more:
-
-* [Codeacademy — Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
-* [Codeacademy — Learn Python](https://www.codecademy.com/learn/python)
-* [Robert Johansson — Scientific Python Lectures](https://github.com/jrjohansson/scientific-python-lectures) (and in particular "Introduction to Python programming")
-
-TODO add RAM requirements and OS (see Docker)
-
 
 <a name="intro-notebooks"></a>
 ## I. Introduction to notebooks
 
-Notebooks are very popular in the Data Science and Machine Learning communities as they provide great ways to learn and experiment. They are interactive web pages that include blocks of code that you can run and edit. For this to work, they need to be served by a notebook server called Jupyter.
-
-You can either use your own installation of Jupyter or you can use a 3rd party service such as Wakari (see `Machine Learning with BigML API - Interactive Code Tutorial.html`) or Microsoft Azure Notebooks.
+Notebooks are very popular in the Data Science and Machine Learning communities as they provide great ways to learn and experiment. They are interactive web pages that include blocks of code that you can run and edit. For this to work, they need to be served by a notebook server called Jupyter. For a quick introduction to Jupyter notebooks, check out this video: [https://youtu.be/pwr-pR0tu5Y](https://youtu.be/pwr-pR0tu5Y)
 
 The easiest way to install Python and Jupyter is via [conda](http://conda.io) (I recommend to use Python 2.7 to maximize compatibility with various packages). You can choose from 3 options:
 
@@ -37,9 +21,14 @@ The easiest way to install Python and Jupyter is via [conda](http://conda.io) (I
 2. Installing Miniconda (command line)
 3. Installing Anaconda (graphical interface)
 
-Check out this discussion on [Miniconda vs Anaconda](https://conda.io/docs/download.html#should-i-download-anaconda-or-miniconda).
+### Remarks
 
-For a quick introduction to Jupyter notebooks, check out this video: [https://youtu.be/pwr-pR0tu5Y](https://youtu.be/pwr-pR0tu5Y)
+* Options 1 and 2 require some basic command line knowledge (you can learn more about the command line in this free course: [Codeacademy — Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)).
+* If you're not familiar with docker and you're leaning towards option 2 or 3, but aren't sure which one to choose, check out this discussion on [Miniconda vs Anaconda](https://conda.io/docs/download.html#should-i-download-anaconda-or-miniconda).
+* Consult the system requirements for your preferred option and make sure you meet them.
+* The Python code in the notebooks included here is pretty simple, but if you want to learn Python from scratch or to improve your Python skills, check out the free resources below:
+   * [Codeacademy — Learn Python](https://www.codecademy.com/learn/python)
+   * [Robert Johansson — Scientific Python Lectures](https://github.com/jrjohansson/scientific-python-lectures) (and in particular "Introduction to Python programming")
 
 <a name="setup-conda-environment"></a>
 ## II. Setting up the conda environment
@@ -68,7 +57,7 @@ docker run -d -p 8888:8888 -v $PWD:/home/jovyan/work --name oml louisdorard/oml 
 
 That's it! Everything's already set up in the docker container. You can jump straight to the section of this document on "Accessing notebooks from Jupyter".
 
-If you're curious, here's some more info on the command line above:
+If you're curious, here's some more information on the command line above:
 
 * it creates a docker container called 'oml' -- which you can think of as a lightweight virtual machine -- from an image found on docker hub and referenced by 'louisdorard/oml'
 * it maps the current directory in your OS to /home/jovyan/work in the container
@@ -143,15 +132,11 @@ Once this is done, launch Anaconda Navigator:
 
 Launching Jupyter should open a new window in your web browser ([http://localhost:8888](http://localhost:8888))
 
-The home page served by Jupyter lists the contents of the folder from which the server was launched. Make sure that the notebooks are within that folder or a sub-folder so you can navigate to them.
+The home page served by Jupyter lists the contents of the folder from which the server was launched. Make sure that the notebooks you want to open are within that folder (or a sub-folder) so you can navigate to them.
+
+If you're new to Jupyter notebooks, start with opening `Simple intro to Jupyter.ipynb`. You can then try `Machine Learning with BigML API - Interactive Code Tutorial.ipynb` and move on to `AmazonML-Python.ipynb` to see how Amazon ML compares to BigML.
 
 When opening a notebook, make sure that the kernel displayed on the right hand side of the page is "Python (oml)". If Jupyter notifies you that the kernel was not found, choose "Python [conda env:oml]".
-
-Note for docker users: you may need to enter a "token" in order to access this home page. You can get it with the following command:
-
-```bash
-docker exec --user jovyan oml jupyter notebook list
-```
 
 <a name="how"></a>
 ## Appendix A: How the conda environment and docker image were created
@@ -202,7 +187,5 @@ Automated builds were also set up on [docker hub](hub.docker.com/r/louisdorard/o
 If you notice anything that needs fixing, please [open an issue](https://github.com/louisdorard/Machine-Learning-Starter-Kit/issues).
 
 TODO test Amazon ML notebook
-
-TODO add Jupyter & Docker videos
 
 TODO test Option 2 on Windows
