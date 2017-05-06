@@ -169,10 +169,10 @@ As user "jovyan":
 
 ```bash
 conda update conda --yes
-conda create --name oml python=2.7 scikit-learn=0.17.1 pandas nltk boto ipykernel --yes
+conda create --name oml python=2.7 scikit-learn=0.17.1 pandas nltk boto ipykernel matplotlib --yes
 source activate oml
-conda install -c aterrel xgboost=0.4.0.c4fa2f --yes
-pip install bigmler==3.8.7 skll==1.2.1 bash_kernel pymongo
+conda install --yes -c aterrel xgboost=0.4.0.c4fa2f
+pip install bigmler==3.8.7 skll==1.2.1 bash_kernel pymongo indicoio
 pip install -i https://pypi.anaconda.org/pypi/simple hyperopt==0.0.2
 conda install --yes 'tensorflow=1.0*'
 conda install --yes -c conda-forge keras=2.0.2
