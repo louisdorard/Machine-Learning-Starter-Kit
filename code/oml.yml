@@ -15,7 +15,7 @@ dependencies:
 - conda-forge::funcsigs=1.0.2=py27_0
 - conda-forge::future=0.16.0=py27_0
 - conda-forge::h5py=2.7.0=np111py27_0
-- conda-forge::hdf5=1.8.17=10
+- conda-forge::hdf5=1.8.17=9
 - conda-forge::ipykernel=4.5.2=py27_0
 - conda-forge::ipython=5.2.2=py27_0
 - conda-forge::ipython_genutils=0.1.0=py27_0
