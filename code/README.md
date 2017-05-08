@@ -25,7 +25,7 @@ The easiest way to install Python and Jupyter is via [conda](http://conda.io) (I
 
 * Options 1 and 2 require some basic command line knowledge (you can learn more about the command line in this free course: [Codeacademy — Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)).
 * If you're not familiar with docker and you're leaning towards option 2 or 3, but aren't sure which one to choose, check out this discussion on [Miniconda vs Anaconda](https://conda.io/docs/download.html#should-i-download-anaconda-or-miniconda).
-* Consult the system requirements for your preferred option and make sure you meet them.
+* Consult the system requirements for your preferred option and make sure to meet them.
 * The Python code in the notebooks included here is pretty simple, but if you want to learn Python from scratch or to improve your Python skills, check out the free resources below:
    * [Codeacademy — Learn Python](https://www.codecademy.com/learn/python)
    * [Robert Johansson — Scientific Python Lectures](https://github.com/jrjohansson/scientific-python-lectures) (and in particular "Introduction to Python programming")
@@ -37,11 +37,7 @@ Conda environments allow us to make sure we are all working with the same versio
 
 ### Option 1: docker
 
-Docker containers act as lightweight virtual machines. Similarly to VMs, they are built from images. The docker image we’ll use is referenced by "louisdorard/oml" (check out the Dockerfile of this repository for more information on how it was built).
-
-Docker is pretty easy to use, but if you're completely new to it, this may not be the best choice for you — unless you run into issues with options 2 & 3.
-
-For a quick introduction to Docker, check out this video: [https://youtu.be/9hzFzcIX10g](https://youtu.be/9hzFzcIX10g)
+Docker "containers" act as lightweight virtual machines. Similarly to VMs, they are built from images. The docker image we’ll use is referenced by "louisdorard/oml" (check out the Dockerfile in this repository for more information on how it was built). For a quick introduction to docker, check out this video: [https://youtu.be/9hzFzcIX10g](https://youtu.be/9hzFzcIX10g)
 
 #### Install docker
 
@@ -49,7 +45,7 @@ Learn more about docker and how to install it on your OS at [https://www.docker.
 
 #### Run docker container
 
-Launch the following command from the current directory:
+Launch the following command (from the directory where this README file is):
 
 ```bash
 docker run -d -p 8888:8888 -v $PWD:/home/jovyan/work --name oml louisdorard/oml start-notebook.sh --NotebookApp.token=''
@@ -143,24 +139,23 @@ When opening a notebook, make sure that the kernel displayed on the right hand s
 
 ### Conda environment
 
-From a [jupyter/base-notebook](https://github.com/jupyter/docker-stacks/blob/master/base-notebook/) docker container, as root:
+Update your [jupyter/base-notebook](https://github.com/jupyter/docker-stacks/blob/master/base-notebook/) image with `docker pull jupyter/base-notebook`. Start a new container with `docker run -d -p 8888:8888 -v $PWD:/home/jovyan/work --name jupyter jupyter/base-notebook`. Start a bash session in that container as root with `docker exec -i -t --user root jupyter bash` and from there:
 
 ```bash
 apt-get update
 apt-get install -yq gcc # required for bigmler later on
 ```
 
-As user "jovyan":
+Start a bash session as jovyan with `docker exec -i -t jupyter bash` and from there:
 
 ```bash
 conda update conda --yes
-conda create --name oml python=2.7 scikit-learn=0.17.1 pandas nltk boto ipykernel matplotlib --yes
+conda create --name oml python=2.7 scikit-learn=0.17.1 pandas nltk boto ipykernel matplotlib tensorflow=1.0.0 --yes
 source activate oml
 conda install --yes -c aterrel xgboost=0.4.0.c4fa2f
+conda install --yes -c conda-forge keras=2.0.2
 pip install bigmler==3.8.7 skll==1.2.1 bash_kernel pymongo indicoio
 pip install -i https://pypi.anaconda.org/pypi/simple hyperopt==0.0.2
-conda install --yes 'tensorflow=1.0*'
-conda install --yes -c conda-forge keras=2.0.2
 conda env export -n oml
 ```
 
