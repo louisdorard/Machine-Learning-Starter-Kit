@@ -5,96 +5,123 @@ channels:
 - defaults
 dependencies:
 - xgboost=0.4.0.c4fa2f=py27_0
+- boto=2.46.1=py27_0
 - backports.shutil_get_terminal_size=1.0.0=py27_1
 - backports_abc=0.5=py27_0
 - blas=1.1=openblas
-- ca-certificates=2017.1.23=0
-- certifi=2017.1.23=py27_0
+- ca-certificates=2017.1.23=1
+- certifi=2017.4.17=py27_0
+- cycler=0.10.0=py27_0
+- dbus=1.10.10=3
 - decorator=4.0.11=py27_0
 - enum34=1.1.6=py27_1
+- expat=2.1.0=2
+- fontconfig=2.12.1=4
+- freetype=2.7=1
 - funcsigs=1.0.2=py27_0
-- future=0.16.0=py27_0
+- functools32=3.2.3.2=py27_1
+- gettext=0.19.7=1
+- glib=2.51.4=0
+- gst-plugins-base=1.8.0=0
+- gstreamer=1.8.0=1
 - h5py=2.7.0=np111py27_0
-- hdf5=1.8.17=9
-- ipykernel=4.5.2=py27_0
-- ipython=5.2.2=py27_0
-- ipython_genutils=0.1.0=py27_0
-- jupyter_client=4.4.0=py27_0
-- jupyter_core=4.2.1=py27_0
+- hdf5=1.8.17=10
+- icu=58.1=1
+- ipykernel=4.6.1=py27_0
+- ipython=5.3.0=py27_0
+- ipython_genutils=0.2.0=py27_0
+- jpeg=9b=0
+- jupyter_client=5.0.1=py27_0
+- jupyter_core=4.3.0=py27_0
 - keras=2.0.2=py27_1
-- libgpuarray=0.6.2=np111py27_0
+- libffi=3.2.1=3
+- libgpuarray=0.6.5=np111py27_0
+- libiconv=1.14=4
+- libpng=1.6.28=0
 - libsodium=1.0.10=0
+- libxcb=1.12=1
+- libxml2=2.9.4=4
 - mako=1.0.6=py27_0
 - markupsafe=0.23=py27_1
+- matplotlib=2.0.1=np111py27_0
 - mock=2.0.0=py27_0
 - ncurses=5.9=10
-- nltk=3.2.1=py27_0
-- nose=1.3.7=py27_2
+- nltk=3.2.2=py27_0
 - numpy=1.11.2=py27_blas_openblas_201
 - openblas=0.2.18=6
-- openssl=1.0.2h=3
-- pandas=0.19.2=np111py27_1
+- openssl=1.0.2k=0
+- pandas=0.20.1=np111py27_0
 - pathlib2=2.2.1=py27_0
-- pbr=2.0.0=py27_0
+- pbr=3.0.0=py27_0
+- pcre=8.39=0
 - pexpect=4.2.1=py27_0
 - pickleshare=0.7.3=py27_0
 - pip=9.0.1=py27_0
-- prompt_toolkit=1.0.13=py27_0
-- protobuf=3.2.0=py27_0
+- prompt_toolkit=1.0.14=py27_0
+- protobuf=3.3.0=py27_0
 - ptyprocess=0.5.1=py27_0
 - pygments=2.2.0=py27_0
-- pymongo=3.2.2=py27_0
-- python=2.7.12=2
+- pyparsing=2.2.0=py27_0
+- pyqt=5.6.0=py27_2
+- python=2.7.13=1
 - python-dateutil=2.6.0=py27_0
-- pytz=2016.10=py27_0
+- pytz=2017.2=py27_0
 - pyyaml=3.12=py27_1
-- pyzmq=16.0.2=py27_1
+- pyzmq=16.0.2=py27_2
+- qt=5.6.2=2
 - readline=6.2=0
-- scandir=1.3=py27_1
+- scandir=1.5=py27_1
 - scikit-learn=0.17.1=np111py27_blas_openblas_202
 - scipy=0.18.1=np111py27_blas_openblas_200
-- setuptools=33.1.0=py27_0
+- setuptools=33.1.1=py27_0
 - simplegeneric=0.8.1=py27_0
 - singledispatch=3.4.0.3=py27_0
+- sip=4.18=py27_1
 - six=1.10.0=py27_1
 - sqlite=3.13.0=1
-- ssl_match_hostname=3.5.0.1=py27_0
+- ssl_match_hostname=3.5.0.1=py27_1
+- subprocess32=3.2.7=py27_0
 - tensorflow=1.0.0=py27_0
 - theano=0.9.0=py27_0
 - tk=8.5.19=1
-- tornado=4.4.2=py27_0
-- traitlets=4.3.1=py27_0
+- tornado=4.5.1=py27_0
+- traitlets=4.3.2=py27_0
 - wcwidth=0.1.7=py27_0
 - wheel=0.29.0=py27_0
+- xorg-libxau=1.0.8=3
+- xorg-libxdmcp=1.1.2=3
+- xz=5.2.2=0
 - yaml=0.1.6=0
 - zeromq=4.2.1=1
 - zlib=1.2.11=0
-- boto=2.45.0=py27_0
 - libgfortran=3.0.0=1
 - pip:
   - backports-abc==0.5
   - backports.shutil-get-terminal-size==1.0.0
   - backports.ssl-match-hostname==3.5.0.1
   - bash-kernel==0.6
-  - beautifulsoup4==4.5.3
+  - beautifulsoup4==4.6.0
   - bigml==4.6.10
   - bigmler==3.8.7
   - configparser==3.5.0b2
+  - futures==3.1.1
   - hyperopt==0.0.2
-  - ipython-genutils==0.1.0
-  - joblib==0.10.3
-  - jupyter-client==4.4.0
-  - jupyter-core==4.2.1
-  - logutils==0.3.3
-  - networkx==1.11
+  - indicoio==1.0.8
+  - ipython-genutils==0.2.0
+  - joblib==0.11
+  - jupyter-client==5.0.1
+  - jupyter-core==4.3.0
+  - logutils==0.3.4.1
+  - olefile==0.44
+  - pillow==4.1.1
   - poster==0.8.1
   - prettytable==0.7.2
-  - prompt-toolkit==1.0.13
-  - pygpu==0.6.2
+  - prompt-toolkit==1.0.14
+  - pygpu==0.6.5
+  - pymongo==3.4.0
   - pystemmer==1.3.0
   - requests==2.13.0
   - ruamel.ordereddict==0.4.9
-  - ruamel.yaml==0.13.14
+  - ruamel.yaml==0.14.11
   - skll==1.2.1
-  - typing==3.5.3.0
   - unidecode==0.4.20
