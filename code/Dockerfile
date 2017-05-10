@@ -24,4 +24,4 @@ RUN conda env create --name oml --file /home/$NB_USER/oml.yml
 
 USER root
 
-RUN /bin/bash -c "source activate oml; python -m ipykernel install --name oml --display-name 'Python (oml)'"
+RUN /bin/bash -c "source activate oml; python -m ipykernel install --name oml --display-name 'Python [conda env:oml]'"
