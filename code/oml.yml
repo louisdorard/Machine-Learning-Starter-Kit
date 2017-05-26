@@ -13,12 +13,11 @@ dependencies:
 - nltk
 - pandas
 - python=2.7
-- scikit-learn
+- scikit-learn=0.18.1
 - tensorflow=1.0.0
 - pip:
   - bash-kernel
   - bigmler==3.8.7
   - hyperopt==0.1
   - indicoio
-  - pymongo
   - skll==1.3
