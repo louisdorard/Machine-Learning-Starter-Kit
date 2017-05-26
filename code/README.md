@@ -35,13 +35,17 @@ The easiest way to install Python and Jupyter is via [conda](http://conda.io) (I
 
 Conda environments allow us to make sure we are all working with the same version of Python and Python packages. Follow the indications below to create an environment that will allow you to use my code.
 
-### Option 1: docker
+### Option 1: Docker
 
 Docker "containers" act as lightweight virtual machines. Similarly to VMs, they are built from images. The docker image we’ll use is referenced by "louisdorard/oml" (check out the Dockerfile in this repository for more information on how it was built). For a quick introduction to docker, check out this video: [https://youtu.be/9hzFzcIX10g](https://youtu.be/9hzFzcIX10g)
 
-#### Install docker
+#### Install Docker Community Edition
 
-Learn more about docker and how to install it on your OS at [https://www.docker.com/](https://www.docker.com/)
+Docker Community Edition is straightforward to install on Linux, Mac (OSX Yosemite 10.10.3 or above) and Windows (Microsoft Windows 10 Professional or Enterprise 64-bit). Learn more about Docker CE and how to install it on your OS at [https://www.docker.com/community-edition](https://www.docker.com/community-edition)
+
+For other versions of those operating systems, you would have to install [Docker Toolbox](https://www.docker.com/products/docker-toolbox). This can be a little more complex, in particular on Windows.
+
+As with VM software, once installed you'll need to specify how many cores you want to let Docker use (I'd recommend to set it to the max) and how much RAM you want to let Docker use (I'd recommend 2GB or more).
 
 #### Run docker container
 
@@ -50,6 +54,8 @@ Launch the following command (from the directory where this README file is):
 ```bash
 docker run -d -p 8888:8888 -v $PWD:/home/jovyan/work --name oml louisdorard/oml start-notebook.sh --NotebookApp.token=''
 ```
+
+(Note: on Windows you may need to replace `$PWD` with `$(pwd)`)
 
 That's it! Everything's already set up in the docker container. You can jump straight to the section of this document on "Accessing notebooks from Jupyter".
 
@@ -123,10 +129,17 @@ Once this is done, launch Anaconda Navigator:
 * Go to the 'Environments' tab and choose 'Import'; enter 'oml' as the name of the environment and point to `oml.yml`
 * Go back to the 'Home' tab and click on the Jupyter icon
 
+### Bonus: Bash kernels
+
+Jupyter notebooks can be used for Python code, but also for Bash with the help of a _Bash kernel_. This is already built in the Docker image used in Option 1; to add a Bash kernel to Jupyter in Options 2 and 3 you need to run the following command: `python -m bash_kernel.install`.
+
+
 <a name="access-notebooks-jupyter"></a>
 ## III. Accessing notebooks from Jupyter
 
 Launching Jupyter should open a new window in your web browser ([http://localhost:8888](http://localhost:8888))
+
+(Note for users of Docker Toolbox (_not_ Docker CE): you would have to get the IP address of your docker container by running `docker-machine ip` and you should replace `localhost` by this IP.)
 
 The home page served by Jupyter lists the contents of the folder from which the server was launched. Make sure that the notebooks you want to open are within that folder (or a sub-folder) so you can navigate to them.
 
