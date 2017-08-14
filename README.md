@@ -25,7 +25,7 @@ Below is a list of real-world datasets that you can use to experiment with ML. I
 
 * [Real-estate properties in Las Vegas](https://papiseval.s3.amazonaws.com/realtor-las-vegas.csv) (`s3://papiseval/realtor-las-vegas.csv`)
 * [Priority Inbox](https://papiseval.s3.amazonaws.com/emails.csv) (`s3://papiseval/emails.csv`)
-* [Orange Churn](https://bml-data.s3.amazonaws.com/churn-orange.tsv.zip) (`s3://bml-data/churn-orange.tsv.zip`)
+* [Churn](https://bml-data.s3.amazonaws.com/churn-tangerine.tsv.zip) (`s3://bml-data/churn-tangerine.tsv.zip`)
 
 
 ## Creating accounts on cloud ML platforms
