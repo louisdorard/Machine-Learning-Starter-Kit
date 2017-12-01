@@ -8,6 +8,7 @@ dependencies:
 - boto
 - ipykernel
 - jpeg # for indicoio
+- flask # to deploy APIs
 - keras=2.0.2
 - matplotlib
 - nltk
